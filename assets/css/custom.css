@@ -1,0 +1,2205 @@
+/* @font-face {
+     font-family: 'Indie Flower', cursive;
+     font-family: 'Frijole', cursive;
+ } */
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    background: #211129;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/bg2.jpg);
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    /* font-family: "Montserrat", arial, sans-serif; */
+    font-size: 100%;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1.45;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+main {
+    height: auto;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+{
+    font-size: 100%;
+    /* font-family: 'Frijole', cursive !important; */
+    font-family: 'Frijole', cursive !important;
+}
+
+p,
+ul li,
+div,
+audio,
+video,
+auther {
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-family: 'Orbitron', sans-serif !important;
+    vertical-align: baseline;
+}
+
+ ::selection {
+    color: #e41633;
+}
+
+h1,
+h2 {
+    /* font-family: 'Frijole', cursive; */
+    font-family: 'Frijole', cursive !important;
+}
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0rem 0 5rem;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.rss-feed {
+    -webkit-perspective: 1;
+    column-fill: balance;
+    column-gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.entry-wrapper {
+    background-color: #2f1737;
+    border-radius: 1px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.entry-image img {
+    border-radius: 1px 1px 0 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 160px;
+    float: left;
+    clear: both;
+    margin-right: 10px;
+}
+
+.entry-title h4 {
+    font-size: 1.1rem;
+    line-height: 1.1;
+    max-height: 36px;
+    overflow: hidden;
+}
+
+.entry-title h4 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+}
+
+.entry-title h4 a:hover {
+    color: rgba(255, 255, 255, .7);
+}
+
+.entry-title h4 a::after {
+    content: "\02197";
+    margin-left: .5rem;
+}
+
+.entry-date,
+.rss-date {
+    font-size: .75rem;
+    padding: .25rem .5rem;
+    color: #d5c8c8;
+}
+
+.mCSB_inside>.mCSB_container {
+    margin-right: 12px;
+}
+
+.entry-text {
+    /*
+        border-top:3px solid #00371d;
+        padding:1rem;
+*/
+}
+
+.entry-content {
+    margin: -4px 0 0;
+    overflow: hidden;
+    max-height: 40px;
+    color: #55817f;
+    font-size: 14px;
+}
+
+.entry-content:empty {
+    display: none;
+}
+
+
+/*
+       @media only screen and (min-width:480px) {
+            .rss-feed {
+            column-count:1;
+            }
+        }
+        
+        @media only screen and (min-width:700px) {
+            .rss-feed {
+            column-count:2;
+            }
+        }
+        
+        @media only screen and (min-width:900px) {
+            .rss-feed {
+            column-count:3;
+            }
+        }
+        
+        @media only screen and (min-width:1200px) {
+            .rss-feed {
+            column-count:4;
+            }
+        }
+*/
+
+a:hover {
+    text-decoration: none;
+}
+
+#z-upper-header {
+    height: 24px;
+    margin-bottom: 20px;
+}
+
+.z-social-links {
+    text-align: left;
+}
+
+#z-upper-header .z-social-links li {
+    display: inline;
+}
+
+#z-upper-header .z-social-links li a {
+    color: #000;
+    font-size: 10px;
+    margin: 2px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+a.z-social-rss:hover a.z-social-rss {
+    /*    background: #E06618;*/
+}
+
+#z-upper-header .z-social-links li a span {
+    width: 12px;
+    height: 12px;
+    margin: 0px -1px 0px 3px;
+}
+
+.z-social-links {
+    margin: 10px 0px 10px -15px;
+}
+
+.z-signin-header {
+    display: inline;
+    list-style: none;
+    float: right;
+    clear: both;
+    position: relative;
+    top: 5px;
+}
+
+.z-signin-header a {
+    color: #fff;
+}
+
+.z-signin-header a span {
+    margin-right: 6px;
+}
+
+.navbar {
+    border-radius: 0;
+    /*    background: #020202b3;*/
+}
+
+.navbar-brand {
+    /* margin-left: 100px !important; */
+    margin-top: -8px;
+}
+
+.navbar-nav li a {
+    /* color: #09FDF4; */
+    color: #fd6e09;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Audiowide', cursive;
+    margin-top: -9px;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:active,
+.navbar-nav li a:focus,
+.nav .open a,
+.nav .open a:focus,
+.nav .open a:hover,
+.dropdown-menu li a:hover {
+    text-shadow: 0px 0px 6px #09FDF4, 0px 0px 12px #09FDF4, 0px 0px 24px #09FDF4, 0px 0px 48px #09FDF4;
+    background-color: transparent;
+}
+
+.dropdown-menu {
+    background-color: rgba(47, 23, 55, 0.88);
+}
+
+.dropdown-menu li a {
+    text-shadow: none !important
+}
+
+.dropdown-menu li a:hover {
+    text-shadow: 0px 0px 6px #09FDF4, 0px 0px 12px #09FDF4, 0px 0px 24px #09FDF4, 0px 0px 48px #09FDF4 !important;
+    /* color: #09FDF4 */
+    color: #fd6e09;
+}
+
+#header {
+    /*    position: absolute;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url("../img/header_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 3px solid rgb(102, 51, 153);
+}
+
+#newsFeeds {
+    overflow: hidden;
+    height: 100%;
+    padding: 0;
+}
+
+.latest-text {
+    color: red;
+}
+
+.latest-news {
+    color: white;
+    background: #171e22;
+    /* margin-left: 30px; */
+    padding: 5px 16px 5px 16px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.latest-news:hover {
+    text-shadow: 0px 0px 6px #09FDF4, 0px 0px 12px #09FDF4, 0px 0px 24px #09FDF4, 0px 0px 48px #09FDF4;
+    background-color: transparent;
+}
+
+#news-feed-section .col-xs-12 {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#news-feed-section .news-feed-title:hover {
+    text-shadow: 0px 0px 6px #387573, 0px 0px 12px #3f5d5b, 0px 0px 24px #390752, 0px 0px 48px #41035a;
+    background-color: transparent;
+}
+
+.horizontalLine:hover {
+    box-shadow: 0px 0px 6px #09FDF4, 0px 0px 12px #09FDF4, 0px 0px 24px #09FDF4, 0px 0px 48px #09FDF4;
+}
+
+.horizontalLine {
+    background-color: #313D46;
+    height: 5px;
+    width: 100%;
+    margin: -16px -15px 15px 0px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+#newsFeeds .news-feed-title,
+.discussionSection h3 {
+    color: #C95AD8;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Frijole', cursive !important;
+    margin-top: 20px;
+}
+
+#news-feed-section .news-feed-title {
+    color: #C95AD8;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
+    padding: 8px 8px;
+    margin-bottom: 10px;
+    font-family: 'Frijole', cursive !important;
+    letter-spacing: 2px;
+}
+
+.rss-title {
+    display: none;
+}
+
+.rss-items {
+    margin: 20px;
+}
+
+li.rss-item {
+    background: #200e24;
+    margin-bottom: 11px;
+    padding: 5px;
+    list-style: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.rss-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.rss-item a {
+    color: azure;
+    transition: 0.3s ease-in;
+}
+
+.rss-item-auth {
+    color: red;
+    font-size: 12px
+}
+
+.slideFeedsSec {
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    background: #020202b3;
+    margin-top: 30px;
+    background: url(../img/header.jpg);
+    background-position: bottom;
+    border-top: 1px solid #73259a;
+    position: absolute;
+}
+
+footer ul {
+    text-align: center;
+}
+
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #9391f6;
+}
+
+.mtd10 {
+    margin: 10px 0px;
+}
+
+.discussionSection {
+    margin: 30px 15px;
+    padding: 5px;
+    background: #200e24;
+    color: #fff;
+    text-shadow: 0px 0px 1px red;
+    overflow: hidden;
+}
+
+.item>img {
+    width: 100%;
+}
+
+.aboutus {
+    color: #C95AD8;
+    cursor: pointer;
+}
+
+footer h4 {
+    color: #fafafa;
+}
+
+footer .z-social-links {
+    /* margin: 8px 30px 18px -30px; */
+    margin: 0 auto;
+    margin-left: auto;
+    margin-left: 15px;
+}
+
+.login-chooser {
+    background: rgba(0, 0, 0, 0.45);
+    width: 300px;
+    height: 342px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 5px solid #fe6602;
+    padding-top: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-top: 5px solid #fe6602;
+    border-radius: 8px;
+}
+
+.fb-login-button {
+    margin-bottom: 20px;
+    margin-top: 67px;
+}
+
+.zephyr-login a {
+    color: #fff;
+}
+
+.g-signin,
+.g-btns-container .form-signin {
+    margin-bottom: 15px;
+    opacity: 0;
+}
+
+.form-signin {
+    margin-bottom: 15px;
+}
+
+
+/* .carousel-inner .item img{
+    min-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+} */
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .75);
+    background: #09FDF4;
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    background: #09FDF4;
+}
+
+.forumsHeadingSec {
+    background: url("../img/csgo/52823_counter_strike.jpg");
+    background-position: center;
+    padding: 50px 15px;
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    min-height: 500px;
+    vertical-align: middle;
+}
+
+.forumsHeadingSec h1 {
+    font-size: 40px;
+    color: skyblue;
+    margin: 30px;
+}
+
+.forumsartical {
+    max-width: 600px;
+    font-size: 20px;
+    color: azure;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+#forums .loginSignUpSection {
+    background: #421C57;
+    padding: 20px;
+}
+
+#forums .loginSignUpSection .loginHead {
+    color: #fff;
+}
+
+#forums .loginSignUpSection .registerHead,
+#forums .loginSignUpSection .loginHead {
+    color: #09FDF4ed;
+    padding: 21px;
+    transform: skew(20deg);
+    display: inline-block;
+}
+
+#forums .loginSignUpSection .registerHead:hover,
+#forums .loginSignUpSection .loginHead:hover {
+    color: azure;
+    transition: 0.5s ease-in-out;
+}
+
+#forums .loginSignUpSection .registerSkew {
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+    padding: 20px;
+    background: #2f1038;
+}
+
+#forums .skewReg {
+    transform: skew(-20deg);
+    display: inline-table;
+}
+
+#forums .registerSkew:hover {
+    transition: 0.5s ease-in-out;
+    background: blue;
+    color: azure;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#forums .allforums {
+    padding: 50px 0px;
+}
+
+#forums .forumCard {
+    background: #261332;
+    padding: 50px 15px;
+    margin-top: 20px;
+}
+
+#forums .forumCard:hover {
+    transition: 0.5s ease-in-out;
+    background: #261332;
+    box-shadow: 3px 7px 20px -5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#forums .forumCard h3 {
+    color: #09fdf4;
+    font-size: 18px;
+    line-height: 45px;
+}
+
+#forums .forumCard h3:hover {
+    text-shadow: 0px 0px 6px #09FDF4, 0px 0px 12px #09FDF4, 0px 0px 24px #09FDF4, 0px 0px 48px #09FDF4;
+}
+
+#forums .forumCard p {
+    color: azure;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.08rem;
+}
+
+#forums .forumCard .totalCounts {
+    height: auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+#forums .forumCard .totalCounts .col-xs-6 {
+    border-radius: 50%;
+    /* width: 150px;
+    height: 150px;
+    margin: 12px; */
+    padding: 5px;
+    text-align: center;
+}
+
+#forums .forumCard .totalCounts .col-xs-6 h4 {
+    color: azure;
+    transition: 0.5s ease-in-out;
+}
+
+#forums .forumCard .totalCounts .col-xs-6 p {
+    font-size: 35px;
+    line-height: 55px;
+}
+
+#forums .forumCard .totalCounts .col-xs-6 .innerCounts {
+    border: 1px solid #0006ff;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+#forums .forumCard .totalCounts .col-xs-6 .innerCounts:hover {
+    /* background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
+    background: linear-gradient(156deg, #0FB8A9 0%, #1fc8db 53%, #1e7b9e 81%);
+    border: 1px solid azure;
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+#aboutCover {
+    text-align: center;
+    background: url(../img/lol/tf.jpg);
+    background-position: top;
+    background-size: cover;
+    padding: 100px 20px;
+    margin-bottom: 26px;
+}
+
+#aboutCover article {
+    max-width: 650px;
+    text-align: left;
+}
+
+#aboutCover article h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0px 0.5px 1px #000;
+}
+
+#aboutCover article p {
+    text-align: right;
+    color: azure;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#whoWeAre h3,
+#whatWeDo h3 {
+    font-size: 30px;
+    color: #09fdf4;
+    word-spacing: 0.3rem;
+    letter-spacing: 2px;
+    line-height: 80px;
+    transition: text-shadow 0.5s, color 0.5s;
+}
+
+#whoWeAre h3:hover,
+#whatWeDo h3:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 6px #09FDF4, 0px 0px 12px #09FDF4, 0px 0px 24px #09FDF4, 0px 0px 48px #09FDF4;
+}
+
+#whoWeAre p,
+#whatWeDo p {
+    color: azure;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-size: 16px;
+}
+
+#whatWeDo .and {
+    border-bottom: 2px solid aqua;
+    border-top: 2px solid aqua;
+    margin: 38px 0px;
+    transition: background 0.5s, box-shadow 0.5s, border-radius 0.5s;
+}
+
+#whatWeDo .and:hover {
+    background: #2f1737;
+    box-shadow: 0px 0px 5px #09FDF4;
+    border-radius: 40px;
+}
+
+.tm1,
+.tm2 {
+    max-width: 991px;
+    margin: 0 auto;
+}
+
+.tm1 .col-xs-12,
+.tm2 .col-xs-12 {
+    padding: 0px;
+}
+
+.tm1 .tm-deg,
+.tm2 .tm-deg {
+    background: rgba(57, 18, 70, 0.88);
+    padding: 10px;
+}
+
+.tm1 .tm-deg h3,
+.tm2 .tm-deg h3 {
+    color: azure;
+    font-size: 22px;
+}
+
+.tm1 .tm-deg p.designation,
+.tm2 .tm-deg p.designation {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    line-height: 26px;
+    border-bottom: 1px solid #d692ec;
+}
+
+.tm1 .tm-deg p.sub-deg,
+.tm2 .tm-deg p.sub-deg {
+    /* position: absolute; */
+    bottom: 20px;
+    /* color: #2f   6f6d; */
+    font-style: italic;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #d692ec;
+    margin: 10px 0px;
+    color: #09fdf4;
+}
+
+.aka {
+    color: #09fdf4;
+}
+
+.tm1 .tm-description,
+.tm2 .tm-description {
+    padding: 10px;
+    background: #000;
+    color: #fafafa;
+    overflow: hidden;
+}
+
+.tm_pic {
+    width: 100%;
+    filter: grayscale(100);
+    transition: transform 1s, filter 1s;
+}
+
+.tm-description {
+    transition: transform 1s;
+}
+
+.tm-description:hover {
+    height: auto;
+    z-index: 1;
+    overflow: auto;
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    transition: display 1s;
+    transition: -webkit-display 1s;
+}
+
+.tm1 .col-sm-6,
+.tm2 .col-sm-6 {
+    position: relative;
+    overflow: hidden;
+}
+
+.tm1 .col-sm-6:hover .overlay,
+.tm2 .col-sm-6:hover .overlay {
+    display: none;
+}
+
+.tm_pic:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+
+#contactCover {
+    /* background-image: url(../img/contact.jpg); */
+    background-image: url(../img/header.jpg);
+    height: 900px;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    background-attachment: fixed;
+    /* max-height: 680px;
+    min-height: 680px; */
+}
+
+.contact-cover-image {
+    width: 100%;
+    height: 900px;
+}
+
+.top-blog-left {}
+
+.top-blog-overlay {
+    background: rgba(255, 255, 255, 0.62);
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0px;
+    padding: 15px;
+}
+
+.top-blog-overlay:hover {
+    cursor: pointer;
+}
+
+.overlay-right {
+    background: rgba(255, 255, 255, 0.62);
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    position: absolute;
+    padding: 15px;
+}
+
+.overlay-right h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.overlay-right h4 {
+    font-size: 18px;
+}
+
+.overlay-right p {
+    font-size: 14px;
+}
+
+.zephyr-blog-cover h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.zephyr-blog-cover .top-blog-right h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: -8px 0;
+}
+
+ss .ztb-cf-content .ztb-message {
+    height: 100px !important;
+}
+
+.menu-item {
+    outline: none !important;
+}
+
+.sliderContainer {
+    padding: 6px;
+    margin-top: 20vh;
+    height: 100vh;
+    vertical-align: middle;
+}
+
+thumbnail-slider {
+    background: #272121;
+}
+
+
+/*GALLERY*/
+
+#events #gallery_container {
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    padding: 0 30px;
+    /*for the buttons */
+    background: #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #888;
+}
+
+#events #gallery {
+    position: relative;
+    height: 100px;
+    width: 600px;
+    overflow: hidden;
+}
+
+#events #slider {
+    position: absolute;
+    left: 0px;
+    height: 100px;
+}
+
+#links .col-xs-6.col-sm-4.col-md-3 {
+    margin: 15px 0px;
+    overflow: hidden;
+}
+
+#links .col-xs-6.col-sm-4.col-md-3 img {
+    transition: transform 1s, filter 1.2s;
+    filter: invert(85%);
+    filter: -weblitinvert(85%);
+}
+
+#links .col-xs-6.col-sm-4.col-md-3 img:hover {
+    transform: scale(1.1);
+    filter: invert(0%);
+    filter: -weblit-invert(0%);
+}
+
+#events #slider img {
+    height: 100.999%;
+    /* fixes some MOZ image resize inconsistencies */
+    float: left;
+    cursor: pointer;
+    border-right: 3px solid transparent;
+    /* instead of margin that could leat to some wrong widths calculations. */
+}
+
+#events .gal_btn {
+    position: absolute;
+    top: 0px;
+    width: 30px;
+    /*the container padding */
+    height: 40px;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#events.gal_left {
+    left: 0px;
+}
+
+.gal_right {
+    right: 0px;
+}
+
+
+/* end GALLERY */
+
+
+/* TOOLTIP ADDON */
+
+#tooltip {
+    position: absolute;
+    z-index: 100;
+    width: 300px;
+    padding: 10px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 3px 6px -2px #111;
+    display: none;
+}
+
+#tooltip * {
+    width: 100%;
+    vertical-align: middle;
+}
+
+#thumbnail-slider ul li {
+    height: 150px !important;
+    width: 200px !important;
+}
+
+#mcTooltipWrapper {
+    margin-top: 0;
+}
+
+#thumbnail-slider .thumb {
+    background-size: cover !important;
+    background-position: left top;
+    width: 200px !important;
+}
+
+.tip-wrap .tip-text h3 {
+    font-size: 20px;
+    color: paleturquoise;
+    line-height: 28px;
+}
+
+.tip-wrap .tip-text {
+    font-size: 14px;
+    color: purple;
+    line-height: 25px;
+}
+
+#zgf {
+    background: url(../img/Signup_background.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+#zgfModal {
+    background: rgba(73, 18, 76, 0.32);
+}
+
+#zgfModal .img,
+#fragology .img {
+    margin: 8px;
+}
+
+#links {
+    background: rgba(0, 0, 0, 0.88);
+    overflow: hidden;
+}
+
+.thumb ul li ul li:hover {
+    cursor: pointer !important;
+    color: #18A1F6 !important;
+}
+
+.modal-content {
+    background: transparent;
+}
+
+.modal-body {
+    overflow: hidden;
+}
+
+.modal-body {
+    position: relative;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.67);
+    color: rgb(252, 252, 252);
+    /* height: 350px; */
+    overflow: auto;
+}
+
+.modal-footer {
+    background-image: url(../img/header.jpg);
+}
+
+#zgfModal {
+    background: rgba(0, 0, 0, 0.46);
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #d1a8e6;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(93, 27, 94, 0.82));
+    text-shadow: 2px 1px 1px #000000;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-right-radius: 29;
+    border-top-left-radius: 25px;
+    background-image: url(../img/header.jpg);
+}
+
+
+/* end TOOLTIP ADDON */
+
+.galleryBtn {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.galleryBtn h1 {
+    font-size: 26px;
+    color: paleturquoise;
+    font-size: 40px;
+    color: #09fdf4;
+    font-weight: bold;
+    background: rgba(65, 8, 62, 0.76);
+    padding: 11px;
+    margin-bottom: 16px;
+}
+
+#galleryPage {
+    background-image: url(../img/Signup_background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+.galleryBtn a.btn {
+    padding: 20px;
+    width: 215px;
+    margin-bottom: 20px;
+}
+
+#gameSubHeader {
+    background: #211c24;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid rgb(102, 51, 153);
+}
+
+.csgoCover,
+.dota_cover {
+    background-size: contain;
+    height: 80vh;
+    background: url(../csgo/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: rgba(34, 17, 39, 0.44);
+    background-attachment: fixed;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.dota-cover-logo {
+    width: 100%;
+    height: 100%;
+    background: url(../img/Logo_Dota_2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+.csgoCover h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #09fdf4;
+    padding-top: 35vh;
+}
+
+.counter-strike-cover-overlay {
+    width: 100%;
+    height: 100%;
+    background: url(../img/Counter-Strike-Global-Offesive-Boosting-Services.png) no-repeat center;
+}
+
+.about-csgo {
+    background-color: rgba(0, 0, 0, 0.87);
+    padding: 50px 15px;
+    overflow: hidden;
+}
+
+.about-csgo h2,
+.pcsc-container h2,
+.secLop h2 {
+    color: azure;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    /* text-transform: uppercase; */
+}
+
+.about-csgo p,
+.pcsc-container p {
+    color: azure;
+    font-size: 16px;
+    line-height: 20px;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.pcsc-container {
+    padding: 50px 10px;
+    color: white;
+}
+
+.pcsc-container img {
+    margin-top: 30px;
+}
+
+.pcsc-container h3,
+.secPriceMoney h3 {
+    color: #09fdf4;
+    font-size: 26px;
+    margin: 22px 0px;
+}
+
+h3.csgo-rank {
+    color: #e509fd;
+}
+
+.et ul li,
+.me ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.secPriceMoney ol li,
+.secOfficialMaps ol li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.et {
+    background-color: black;
+}
+
+.purple-bg {
+    background: #36183e;
+}
+
+.black-bg {
+    background: #000;
+}
+
+.secPriceMoney ol,
+.secOfficialMaps ol {
+    list-style: decimal;
+}
+
+.secPriceMoney,
+.secOfficialMaps,
+.secLop {
+    padding: 50px 10px;
+    text-align: center;
+    color: #fff;
+    height: auto;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.secLop {
+    text-align: left;
+}
+
+.secLop h3 {
+    margin-bottom: 35px;
+    color: #09fdf4;
+}
+
+.secLop .table-inverse,
+.commands.table-inverse {
+    text-align: left;
+    background-color: black;
+}
+
+.secLop .img {
+    min-width: 100%;
+}
+
+.replayCover {
+    overflow: hidden;
+    background-image: url(../img/csgo/background.jpg);
+    padding: 75px 20px;
+    position: relative;
+    background-position: center top;
+    text-shadow: 0px 0px 1px black, 0px 0px 1px black, 0px 1px 1px black;
+}
+
+.replayCover h2,
+.dotaReplayCover h2,
+.dota-replay-record-section h2,
+.dota-hiding-ui-section h2 {
+    font-size: 32px;
+    color: paleturquoise;
+    margin-bottom: 30px;
+    /* text-transform: uppercase; */
+    text-align: center;
+    text-shadow: 0px 0px 1px black, 0px 0px 1px black, 0px 1px 1px black;
+}
+
+.replayCover p {
+    font-size: 16px;
+    color: #F6F6F6;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 835px;
+}
+
+.z-ind1 {
+    z-index: 1;
+}
+
+.b_recording_section {
+    background-color: #1a011f;
+    padding: 50px 15px;
+}
+
+.b_recording_section h2,
+.overview-cmd,
+.hiding-hud h2 {
+    color: #368bb5;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0px 0.25px 0.8px black, 0px 1px 0px black, 1px 0px 0px beige;
+    margin-bottom: 30px;
+}
+
+.b_recording_section ul li {
+    /* color: rebeccapurple; */
+    color: white;
+    text-shadow: 0px 0.25px 0.8px black, 0px 1px 0px black, 1px 0px 0px black;
+}
+
+.fbi-demo,
+.ul_rec_steps,
+.commands {
+    max-width: 835;
+}
+
+.ul_rec_steps .items,
+.fbi-demo .items {
+    margin-bottom: 20px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.commands tr td {
+    padding: 10px;
+    border: 1px solid #333333;
+    color: #9c9797;
+}
+
+.hiding-hud .container p {
+    font-size: 16px;
+    color: #e3f6fc;
+    margin-bottom: 20px;
+}
+
+.hiding-hud .container .hud-cmd-list li {
+    margin-bottom: 10px;
+}
+
+.file {
+    visibility: hidden;
+    position: absolute;
+}
+
+.dota_cover {
+    /* overflow: hidden;
+    padding: 50px 15px;
+    max-width: 835px; */
+    background: url(../dota2/background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.middle-container {
+    max-height: 350px;
+}
+
+.dota-history,
+.dota-international {
+    padding: 50px 15px;
+}
+
+.dota-history h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: paleturquoise;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    text-align: center;
+    background: black;
+}
+
+.dota-history img {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.dota-history-img-with-text-around p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+#dota-history-img-with-text-around {
+    font-family: Open Sans, sans-serif;
+    margin: 2rem;
+}
+
+#dota-history-img-with-text-around p,
+.dota-international p {
+    line-height: 1.9rem;
+    margin-bottom: 24px;
+    color: #cfcbd0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #000, 0px 0px 0.5px, 0px 1px 0px #350935;
+    font-size: 16px;
+}
+
+#dota-history-img-with-text-around .curve {
+    width: 39%;
+    height: auto;
+    min-width: 150px;
+    float: left;
+    margin-right: 2rem;
+    border-radius: 40% 0% 40% 0%;
+    -webkit-shape-outside: margin-box;
+    shape-outside: margin-box;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.dota-international {
+    overflow: hidden;
+}
+
+.dota-international h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: paleturquoise;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dota-international-tournament {
+    overflow: hidden;
+    margin: 50px 10px;
+}
+
+.dota-international-tournament .mCustomScrollBox {
+    margin: 30px 0px;
+}
+
+.dota-international {
+    margin: 0px -15px;
+}
+
+.black-bg-st {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 0px;
+}
+
+.dota-replay-cover,
+.dota-replay-record-section,
+.dota-hiding-ui-section {
+    padding: 50px 10px;
+    overflow: hidden;
+}
+
+.dotaReplayCover {
+    overflow: hidden;
+    padding: 75px 20px;
+    position: relative;
+    background-position: center top;
+    text-shadow: 0px 0px 1px black, 0px 0px 1px black, 0px 1px 1px black;
+}
+
+.dotaReplayCover p,
+.dota-replay-record-section p {
+    font-size: 16px;
+    color: #f6edf6;
+    margin-bottom: 15px;
+    text-align: justify;
+    max-width: 835px;
+    letter-spacing: 1px;
+}
+
+.dotaReplayCover ul li,
+.dota-replay-record-section ol li,
+.dota-hiding-ui-section ul li {
+    color: #cec7ce;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.dota-replay-record-section ol,
+.dota-hiding-ui-section ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.dota-hiding-ui-section h3 {
+    font-size: 26px;
+    margin: 30px 0px;
+    color: #ccc;
+    /* text-transform: uppercase; */
+    border-bottom: 1px solid red;
+}
+
+.zephyr-blog-cover,
+.blog-archive {
+    background: rgb(21, 20, 21);
+}
+
+.zephyr-blog-cover h1,
+.blog-profile h1,
+.blog-archive h1 {
+    text-align: Left;
+    font-size: 36px;
+    color: white;
+    margin: 50px 15px;
+}
+
+.blog-img {
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.blog-container .panel {
+    background: transparent;
+}
+
+.modal-body h3 {
+    color: #811ed1;
+    font-size: 26px;
+    margin: 75px 0px;
+    font-style: oblique;
+    font-variant-caps: petite-caps;
+    letter-spacing: 0.2rem;
+    font-family: 'Frijole', cursive;
+    text-align: center;
+}
+
+.modal-body {
+    background: rgba(0, 0, 0, 0.7)
+}
+
+.close {
+    color: red;
+    text-shadow: 0 1px 0 #590606;
+    opacity: 0.8;
+}
+
+.close:hover {
+    text-shadow: 0 1px 0 red;
+    color: #590606;
+    opacity: 0.8;
+}
+
+.modal-lg {
+    width: 100%;
+}
+
+.modal-footer .btn-primary {
+    color: #fff;
+    background-color: #33194d;
+}
+
+.modal-body .sub-item-head {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.blog-conatiner .panel-title h4 a {
+    font-family: 'Frijole', cursive;
+}
+
+.modal-body p,
+.modal-body li.sub-item {
+    font-size: 16px;
+    color: #fdfdfd;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-family: sans-serif;
+    max-width: 835px;
+    text-align: justify;
+    margin: 0 auto;
+    text-shadow: 0.009rem 0 0 #000, 0 0.009rem 0px #000, 0 0 0.009rem #000;
+}
+
+.modal-body li.items {
+    margin-bottom: 20px;
+    margin: 20px 0px;
+}
+
+.modal-body li.sub-item {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.modal-body li.sub-item:last-child {
+    margin-bottom: 20px;
+}
+
+.blog-container .panel-default>.panel-heading {
+    color: #dcc3c3;
+    background-color: #2d1633;
+    border-color: #020204;
+}
+
+img#maintenance {
+    width: 100%;
+    height: 100vh;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+.blog-archive {}
+
+.blog-archive div.col-md-4 {
+    margin-bottom: 15px;
+}
+
+#career-cover {
+    text-align: center;
+    background: url(../img/career-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 100px 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#career-cover .container {
+    background: rgba(60, 4, 88, 0.1);
+    padding: 50px 0px;
+    border-radius: 6px;
+}
+
+#career-cover h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 0px 0.5px 1px #000;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.career-objective {
+    padding: 50px 15px;
+    background-color: #131212;
+}
+
+.career-objective h2 {
+    font-size: 32px;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #7b7b7b;
+}
+
+.benifit-section {
+    padding: 75px 15px;
+    background: #232020;
+}
+
+.benifit-section img {
+    margin-top: 7px;
+}
+
+.benifit-section .col-md-8 h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #aba6a6;
+}
+
+.benifit-section .col-md-8 p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #7E7A7A;
+}
+
+.current-oppenings {
+    background: #191717;
+    padding: 75px 15px;
+}
+
+.current-oppenings h2 {
+    color: #afafaf;
+    font-size: 36px;
+    margin: 30px 0px;
+}
+
+.current-oppenings .job-container h3 {
+    font-size: 26px;
+    color: #a7a2a2;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 25px 0px;
+}
+
+.current-oppenings .job-container p {
+    font-size: 16px;
+    color: #a7a2a2;
+    letter-spacing: 2px;
+    text-align: justify;
+    margin-bottom: 36px;
+}
+
+.job-container {
+    margin-top: 75px;
+}
+
+.login-page {
+    background-image: url(../img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    padding: 75px 15px;
+}
+
+.glyphicon {
+    font-family: 'Glyphicons Halflings' !important;
+}
+
+.navbar-toggle {
+    border: 1px solid purple;
+}
+
+.navbar-toggle .icon-bar {
+    background: #971de4;
+}
+
+.login-page {
+    background-image: url(../img/social-login-bg.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.contact-form-container-outer {
+    /* background: #2b2929; */
+    background: rgba(19, 11, 26, 0.93);
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.layer-one {
+    top: 30;
+}
+
+.layer-one h1 {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1108%;
+    color: rgba(132, 132, 132, 0.4);
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.layer-two {
+    /* margin: 5%; */
+    /* padding: 5%; */
+    background: #313030;
+    height: auto;
+    position: absolute;
+    top: 14%;
+    left: 7%;
+    right: 66px;
+    text-align: left;
+}
+
+.get-in-touch {
+    font-size: 30px;
+}
+
+.layer-two .contact-social-link-container {
+    /* background: #212020; */
+    background: #101010;
+    text-align: center;
+    margin-top: 86px;
+    height: 324px;
+    padding-top: 75px;
+    font-size: 24xp;
+}
+
+.layer-two .contact-social-link-container h2 {
+    text-align: left;
+    padding-left: 15px;
+    font-size: 20px !important;
+}
+
+.contact-social-link-container .col-md-3 div {
+    background: #101010;
+    margin: 0 -15px;
+    height: 200px;
+    position: relative;
+}
+
+.contact-social-link-container .col-md-3 div i.fa {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40px) translateX(-40px);
+    left: 50%;
+    transition: font-size 2s, color 2s, transform 2s;
+    color: #332f33;
+}
+
+.contact-social-link-container .col-md-3 div i.fa:hover {
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50px) translateX(-50px);
+    left: 50%;
+    color: #fff;
+}
+
+.layer-two .social-links {
+    margin-top: 35px;
+}
+
+.layer-two .social-links i {
+    font-size: 20px;
+    margin: 3px 20px;
+    color: #ff9258;
+}
+
+.layer-two .social-links a {
+    color: #d6cfde;
+    letter-spacing: 2px;
+}
+
+.fb-login-btn-custom,
+.g-login-btn-custom,
+.stm-login-btn-custom,
+.zephyr-login {
+    background: #4267b2;
+    margin: 0 20px;
+    padding: 8px;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 20px 0px;
+}
+
+.g-login-btn-custom {
+    background: red;
+}
+
+.stm-login-btn-custom {
+    background: green;
+    z-index: -1;
+}
+
+.fb_iframe_widget {
+    opacity: 0;
+}
+
+div._5h0c._5h0f {
+    width: 260px !important;
+    height: 40px !important;
+}
+
+.zephyr-login {
+    background: #711a7d;
+    margin-top: 11px;
+    padding: 5px;
+}
+
+html html button {
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+.stm-form input {
+    width: 270px;
+    opacity: 0;
+}
+
+.back-btn {
+    position: absolute;
+    width: 215px;
+    height: auto;
+    margin: 20px;
+    top: 11px;
+    left: -161px;
+}
+
+.back-btn:hover {
+    left: -150px;
+    cursor: pointer;
+}
+
+.timeline-container {
+    margin-top: 80px;
+}
+
+.timeline-dots {
+    width: 200px !important;
+    background: black !important;
+}
+
+.timeline-dots li button {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2972ca;
+}
+
+.timeline-horizontal .timeline-dots li {
+    float: left;
+    width: 65px;
+    text-align: center;
+}
+
+.timeline {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.53);
+}
+
+.timeline-item {
+    border: 1px solid #530d77;
+}
+
+.timeline-dots li.slide-active button {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+.timeline-horizontal .timeline-dots {
+    width: 320px;
+}
+
+h3.event-title {
+    font-size: 26px;
+    color: #ff45ff;
+    text-align: right;
+}
+
+.event-title {
+    cursor: pointer;
+}
+
+.events-newsfeed {
+    font-size: 36px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.events-newsfeed h1 {
+    margin: 50px 10px;
+}
+
+h4.event-subtitle {
+    font-size: 15px;
+    color: #e6e6e6;
+    margin-left: 2px;
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.event-description {
+    margin-top: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: right;
+    color: #b3b1b1;
+}
+
+
+/* matelic button style starts */
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import url(prefixes.css);
+.metal {
+    position: relative;
+    margin: 40px auto;
+    outline: none;
+    font: bold 6em/2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    text-align: center;
+    color: hsla(0, 0%, 20%, 1);
+    text-shadow: hsla(0, 0%, 40%, .5) 0 -1px 0, hsla(0, 0%, 100%, .6) 0 2px 1px;
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: inset hsla(0, 0%, 15%, 1) 0 0px 0px 4px, /* border */
+    inset hsla(0, 0%, 15%, .8) 0 -1px 5px 4px, /* soft SD */
+    inset hsla(0, 0%, 0%, .25) 0 -1px 0px 7px, /* bottom SD */
+    inset hsla(0, 0%, 100%, .7) 0 2px 1px 7px, /* top HL */
+    hsla(0, 0%, 0%, .15) 0 -5px 6px 4px, /* outer SD */
+    hsla(0, 0%, 100%, .5) 0 5px 6px 4px;
+    /* outer HL */
+    transition: color .2s;
+}
+
+
+/* Radial ------------------------- */
+
+.radial.metal {
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+    border-radius: 80px;
+    background-image: -webkit-radial-gradient( 50% 0%, 8% 50%, hsla(0, 0%, 100%, .5) 0%, hsla(0, 0%, 100%, 0) 100%), -webkit-radial-gradient( 50% 100%, 12% 50%, hsla(0, 0%, 100%, .6) 0%, hsla(0, 0%, 100%, 0) 100%), -webkit-radial-gradient( 0% 50%, 50% 7%, hsla(0, 0%, 100%, .5) 0%, hsla(0, 0%, 100%, 0) 100%), -webkit-radial-gradient( 100% 50%, 50% 5%, hsla(0, 0%, 100%, .5) 0%, hsla(0, 0%, 100%, 0) 100%), -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 3%, hsla(0, 0%, 0%, .1) 3.5%), -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 6%, hsla(0, 0%, 100%, .1) 7.5%), -webkit-repeating-radial-gradient( 50% 50%, 100% 100%, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 1.2%, hsla(0, 0%, 100%, .2) 2.2%), -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0, 0%, 90%, 1) 5%, hsla(0, 0%, 85%, 1) 30%, hsla(0, 0%, 60%, 1) 100%);
+}
+
+.metal.radial:before,
+.metal.radial:after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    /* fake conical gradients */
+    background-image: -webkit-radial-gradient( 50% 0%, 10% 50%, hsla(0, 0%, 0%, .1) 0%, hsla(0, 0%, 0%, 0) 100%), -webkit-radial-gradient( 50% 100%, 10% 50%, hsla(0, 0%, 0%, .1) 0%, hsla(0, 0%, 0%, 0) 100%), -webkit-radial-gradient( 0% 50%, 50% 10%, hsla(0, 0%, 0%, .1) 0%, hsla(0, 0%, 0%, 0) 100%), -webkit-radial-gradient( 100% 50%, 50% 06%, hsla(0, 0%, 0%, .1) 0%, hsla(0, 0%, 0%, 0) 100%);
+}
+
+.metal.radial:before {
+    transform: rotate( 65deg);
+}
+
+.metal.radial:after {
+    transform: rotate(-65deg);
+}
+
+
+/* Linear ------------------------- */
+
+.metal.linear {
+    width: auto;
+    font-size: 1rem;
+    height: 30px;
+    border-radius: 23px;
+    background-image: -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 6%, hsla(0, 0%, 100%, .1) 7.5%), -webkit-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0) 4%, hsla(0, 0%, 0%, .03) 4.5%), -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0) 1.2%, hsla(0, 0%, 100%, .15) 2.2%), linear-gradient(180deg, hsl(0, 0%, 78%) 0%, hsl(0, 0%, 90%) 47%, hsl(0, 0%, 78%) 53%, hsl(0, 0%, 70%)100%);
+    margin: 18px 6px;
+    box-shadow: none;
+}
+
+
+/* Oval ------------------------- */
+
+.metal.linear.oval {
+    margin-top: 100px;
+    width: 70px;
+    height: 60px;
+    line-height: 60px !important;
+    border-radius: 50%;
+    font: italic bold 3em/50px Georgia, "Times New Roman", Times, serif;
+}
+
+
+/* active ------------------------- */
+
+.metal:active {
+    color: hsl(210, 100%, 40%);
+    text-shadow: hsla(210, 100%, 20%, .3) 0 -1px 0, hsl(210, 100%, 85%) 0 2px 1px, hsla(200, 100%, 80%, 1) 0 0 5px, hsla(210, 100%, 50%, .6) 0 0 20px;
+    box-shadow: inset hsla(210, 100%, 30%, 1) 0 0px 0px 4px, /* border */
+    inset hsla(210, 100%, 15%, .4) 0 -1px 5px 4px, /* soft SD */
+    inset hsla(210, 100%, 20%, .25) 0 -1px 0px 7px, /* bottom SD */
+    /* inset hsla(210, 100%, 100%, .7) 0 2px 1px 7px, /* top HL */
+    /* hsla(210, 100%, 75%, .8) 0 0px 3px 2px, outer SD */
+    /* hsla(210, 50%, 40%, .25) 0 -5px 6px 4px, outer SD *   
+    /* hsla(210, 80%, 95%, 1) 0 5px 6px 4px; */
+    /* outer HL */
+}
+
+
+/* matelic button style ends */
+
+@media only screen and (max-width: 360px) {
+    body {
+        background-color: lightblue;
+    }
+    nav li {
+        margin-top: 18px !important;
+    }
+    .dropdown.metal.linear.open {
+        z-index: 1;
+    }
+    .metal.linear {
+        font-size: 0.7rem !important;
+    }
+    .dropdown-menu {
+        background: #160832 !important;
+    }
+    #HomeIMGSlider {
+        padding: 0;
+    }
+    .counter-strike-cover-overlay {
+        background-size: contain;
+    }
+    .tm-description:hover {
+        transform: none;
+    }
+    #aboutContent .container {
+        margin: 0 -15px;
+    }
+    .tm1 .tm-description,
+    .tm2 .tm-description {
+        margin-bottom: 20px;
+        border-block-end: 1px solid red;
+    }
+    .tm1 .col-xs-12 {
+        margin-top: 20px;
+    }
+    .rss-items {
+        margin: 20px -20px;
+    }
+    .skewReg.text-left {
+        text-align: right;
+    }
+    .forumsHeadingSec {
+        padding: 30px 0;
+    }
+    footer .z-social-links {
+        margin-left: -28px;
+    }
+    .top-blog-right .col-md-6 {
+        margin: 15px 0;
+    }
+    .next-row {
+        margin-top: -15px;
+    }
+    .layer-one h1 {
+        font-size: 45px;
+    }
+    .layer-two {
+        margin: 0;
+        padding: 0;
+        background: #313030;
+        height: 1015px;
+        position: absolute;
+        top: 75px;
+        left: 15px;
+        right: 15px;
+        text-align: left;
+    }
+    .layer-two .contact-social-link-container {
+        margin-top: 646px;
+    }
+    .custom-contact-form {
+        position: absolute;
+        top: 430px !important;
+    }
+    #contactCover {
+        height: 1115px;
+    }
+    .timeline-parent {
+        width: 345px !important;
+        overflow: hidden !important;
+    }
+    .counter-strike-cover-overlay {
+        background-size: 80%;
+    }
+    #dota-history-img-with-text-around p,
+    .dota-international p {
+        font-size: 14px;
+    }
+    .dota-replay-cover .col-md-4 {
+        margin: 15px 0px;
+    }
+    #dota_replay .form-control.input-lg {
+        display: none;
+    }
+    #dota_replay .form-group {
+        margin-left: 22px;
+    }
+}
+
+.top-blog-right .col-md-6 {
+    margin-bottom: 15px;
+}
+
+.mcTooltipInner a {
+    display: none;
+}
+
+
+/* .tail-trancation {
+    display: inline;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
